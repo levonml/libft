@@ -3,12 +3,15 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 
 int 	main()
 {
-	char d[] = "1234567";
-    char s[] = "aacraaas";
+	char d[] = "12";
+    char s[] = "acaraaas";
 
-	if( ft_memccpy(d, s, 'c', 5) == NULL)
-		printf("%p\n", ft_memccpy(d, s, 'c', 5));
+	void *v;
+
+	v = ft_memccpy(d, s, 'c', 5);
+	if (v != NULL)
+		printf("%s\n", (char*)v);
 	else
-		printf("%s\n", (char*)ft_memccpy(d, s, 'c', 5));
-	return(0);
+		printf("%p\n", v);
+	return (0);
 }
