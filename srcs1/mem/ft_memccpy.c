@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/07 20:56:56 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/08 15:12:31 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/08 16:05:36 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		d[i] = s[i];
 		if (s[i] == c)
-			return (d + i + 1);
+			return (dest + i + 1);
 		i++;
 	}
 	return (NULL);

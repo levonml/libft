@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/07 14:26:53 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/07 17:22:55 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/08 17:24:03 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/08 17:30:36 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <libft.h>
-
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+char *ft_strcpy(char *dest, const char *src)
 {
-	char *str1;
-	char *str2;
+	int i;
 
-	str1 = (char*)s1;
-	str2 = (char*)s2;
-
-	if (n == 0)
-		return (0);
-	else
+	i = 0;
+	while (src[i])
 	{
-		if (n > 0)
-			{
-				return(ft_strcmp(str1, str2));
-	 		n--;
-			}
+		dest[i] = src[i];
+		i++;
 	}
-			return (0);
+	dest[i] = src[i];
+	return (dest);
 }
