@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/05 23:06:42 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/05 23:07:52 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/10 19:50:21 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/10 22:02:36 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-# define HEADER_H
+#include "libft.h"
 
-# include <stdlib.h>
-#endif
+char	*ft_strchr(const char *s, int c)
+{
+	size_t	i;
+
+	i = 0;
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] == (char)c)
+			return ((char*)(s + i));
+		i++;
+	}
+	return (NULL);
+}

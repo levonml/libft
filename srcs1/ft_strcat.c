@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 11:25:42 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/09 11:43:41 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/10 21:35:44 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <libft.h>
@@ -16,7 +16,9 @@ char	*ft_strcat(char* dest, const char *src)
 	int i;
 	int j;
 
-	j = ft_strlen(dest);
+	j = 0;
+	while (dest[j])
+		j++;
 	i = 0;
 	while (src[i])
 	{

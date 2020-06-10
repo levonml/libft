@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/10 11:46:09 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/10 19:32:58 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/10 21:29:17 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	int		h;
+	size_t	h;
 
-	h = 0;
-	while (src[h])
-		h++;
-	j = ft_strlen(dest);
+	j = 0;
+	while (dest[j])
+		j++;
+	h = ft_strlen(src);
 	if (size <= j)
 		return (size + h);
 	else
