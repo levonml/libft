@@ -9,6 +9,6 @@ int main(int argc, char **argv)
 		return(1);
 	}
 	else
-		printf("%s", ft_strncat(argv[1], argv[2], 50));
+		printf("%s", ft_strncat(argv[1], argv[2], 4));
 	return (0);
 }
