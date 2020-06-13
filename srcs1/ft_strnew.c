@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/13 18:03:35 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/13 16:44:17 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/13 17:59:12 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *c);
-int		ft_strcmp(char *s1, char* s2);
-void	ft_bzero(void *s, size_t n);
-#endif
+char *ft_strnew(size_t size)
+{
+	char *str;
+
+	if(!(str = (char*)malloc(sizeof(char) * (size + 1))))
+		return (NULL);
+	else
+	{
+		ft_bzero((void*)str, size + 1);
+		return (str);
+	}
+		   
+}
