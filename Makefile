@@ -1,7 +1,7 @@
 
 # -*- MAKEFILE -*-
-SRC = srcs1/ft_striter.c
-MAIN = tests/ft_striter_main.c
+SRC = srcs1/ft_strequ.c srcs1/str/ft_strcmp.c
+MAIN = tests/ft_strequ_main.c
 HEADER = includes
 all:
 	gcc -Wall -Wextra -Werror -lbsd $(SRC) $(MAIN) -I $(HEADER)

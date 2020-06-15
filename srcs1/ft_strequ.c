@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/15 13:06:27 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/15 12:52:40 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/15 13:09:47 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *c);
-int		ft_strcmp(char const *s1, char const *s2);
-void	ft_bzero(void *s, size_t n);
-char *ft_strnew(size_t size);
-void ft_bzero(void *s, size_t n);
-#endif
+int	ft_strequ(char const *s1, char const *s2)
+{
+	if (ft_strcmp(s1, s2) == 0)
+		return (1);
+	return (0);
+}

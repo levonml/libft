@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/15 13:06:27 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/15 10:02:26 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/15 12:24:46 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *c);
-int		ft_strcmp(char const *s1, char const *s2);
-void	ft_bzero(void *s, size_t n);
-char *ft_strnew(size_t size);
-void ft_bzero(void *s, size_t n);
-#endif
+char	*ft_strmap(char const *s, char (*f)(char))
+{
+	char	*map;
+	int		i;
+
+	map = ft_strnew(ft_strlen(s));
+	if (map == NULL)
+		return (NULL);
+	else
+	{
+		i = 0;
+		while (s[i])
+		{
+			map[i] = f(s[i]);
+			i++;
+		}
+	}
+	return (map);
+}

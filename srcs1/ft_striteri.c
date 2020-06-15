@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/15 13:06:27 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/14 09:50:59 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/15 09:44:13 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int i;
 
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *c);
-int		ft_strcmp(char const *s1, char const *s2);
-void	ft_bzero(void *s, size_t n);
-char *ft_strnew(size_t size);
-void ft_bzero(void *s, size_t n);
-#endif
+	i = 0;
+	while (s[i])
+	{
+		(f)(i, &s[i]);
+		i++;
+	}
+}
