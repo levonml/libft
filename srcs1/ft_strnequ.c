@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/15 23:25:22 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/15 21:43:09 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/15 22:08:31 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *c);
-int		ft_strcmp(char const *s1, char const *s2);
-int		ft_strncmp(char const *s1, char const *s2, size_t n);
-void	ft_bzero(void *s, size_t n);
-char	*ft_strnew(size_t size);
-void	ft_bzero(void *s, size_t n);
-#endif
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
+{
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
+	return (0);
+}
