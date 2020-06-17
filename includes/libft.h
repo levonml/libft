@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/17 00:28:55 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/17 22:47:59 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 
 #define WS(x) (x == ' ' || x == '\n' || x == '\t')
 
+void	ft_putchar(char c);
+void	ft_putstr(const char *s);
+void	ft_putstr_fd(const char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlen(const char *c);
 int		ft_strcmp(char const *s1, char const *s2);
 int		ft_strncmp(char const *s1, char const *s2, size_t n);
