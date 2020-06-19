@@ -6,13 +6,13 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 09:39:42 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/19 13:28:54 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/19 13:41:00 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_len(char const *s1, char c, size_t i)
+static size_t	ft_len(char const *s1, char c, size_t i)
 {
 	size_t temp;
 
@@ -23,14 +23,14 @@ size_t	ft_len(char const *s1, char c, size_t i)
 	return (i);
 }
 
-size_t	ft_start(char const *s1, char c, size_t i)
+static size_t	ft_start(char const *s1, char c, size_t i)
 {
 	while (s1[i] == c)
 		i++;
 	return (i);
 }
 
-size_t	arr_num(char const *s, char c)
+static size_t	arr_num(char const *s, char c)
 {
 	size_t i;
 	size_t j;
