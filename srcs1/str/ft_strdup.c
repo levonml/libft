@@ -6,21 +6,11 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 18:25:41 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/04 14:20:33 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/18 12:52:06 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int		ft_strlen(char *src)
-{
-	int i;
-
-	i = 0;
-	while (src[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

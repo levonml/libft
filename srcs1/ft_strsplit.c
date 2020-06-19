@@ -6,36 +6,70 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 09:39:42 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/17 11:03:48 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/19 13:28:54 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char **ft_strsplit(char const  s*, char c)
-{
-	char **split;
-	int i;
+#include "libft.h"
 
-    i = 0;
+size_t	ft_len(char const *s1, char c, size_t i)
+{
+	size_t temp;
+
+	temp = i;
+	while ((s1[i] != c) && (s1[i]))
+		i++;
+	i = i - temp;
+	return (i);
+}
+
+size_t	ft_start(char const *s1, char c, size_t i)
+{
+	while (s1[i] == c)
+		i++;
+	return (i);
+}
+
+size_t	arr_num(char const *s, char c)
+{
+	size_t i;
+	size_t j;
+
+	i = 0;
+	j = 0;
+	if (s[i] != c)
+		j++;
 	while (s[i])
 	{
-		if (s[i] == c)
-		{
-			j = 0;
-			i++;
-		}
-		else
-		{
+		if ((s[i] != c) && (s[i - 1] == c))
 			j++;
-		}
-			
-	}
-	i++
-		split ==(char**)malloc(sizeof(char*) * (j + 1));
-	split[j + 1] = "\0";
-	
-	while (split[i])
-	{
-		split[i] = (char*)malloc(sizeof(char) * n);
 		i++;
 	}
+	return (j);
+}
+
+char	**ft_strsplit(char const *s, char c)
+{
+	char	**split;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	size_t	start;
+
+	j = arr_num(s, c);
+	split = (char**)malloc(sizeof(char*) * (j + 1));
+	if (split == NULL)
+		return (NULL);
+	i = 0;
+	k = j;
+	j = 0;
+	while (i < k)
+	{
+		start = ft_start(s, c, j);
+		split[i] = ft_strsub(s, start, ft_len(s, c, start));
+		j = start + ft_len(s, c, start);
+		i++;
+	}
+	split[i] = NULL;
+	return (split);
 }

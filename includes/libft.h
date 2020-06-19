@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/17 22:47:59 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/18 13:04:42 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strcat(char *dest, const char *src);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strsub(char const *s, unsigned char start, size_t len);
 char	*ft_strnew(size_t size);
+char	*ft_strdup(char *str);
 void	ft_bzero(void *s, size_t n);
 #endif
