@@ -6,13 +6,13 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:56:43 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/19 15:21:57 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 17:41:03 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-char *ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t i;
 

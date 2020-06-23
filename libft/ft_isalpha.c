@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 11:44:53 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/12 15:49:14 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 11:20:11 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ int	ft_isalpha(int c)
 {
 	if (((c <= 'Z') && (c >= 'A')) || ((c <= 'z') && (c >= 'a')))
 		return (c);
-	return(0);
+	return (0);
 }

@@ -6,11 +6,10 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 22:15:56 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/17 22:56:09 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/23 14:45:00 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

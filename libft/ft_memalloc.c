@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 20:47:33 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/13 17:39:48 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 20:55:37 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void	*m;
+	void *m;
 
 	m = malloc(size);
 	if (m == NULL)

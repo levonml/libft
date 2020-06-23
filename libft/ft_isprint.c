@@ -6,14 +6,13 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 18:42:08 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/12 18:44:44 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 11:46:59 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_isprint(int c)
 {
 	if ((c >= 32) && (c <= 126))
 		return (1);
-	return(0);
+	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 10:46:40 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/06 22:01:24 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 01:53:48 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {

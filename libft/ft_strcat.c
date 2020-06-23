@@ -6,12 +6,11 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 11:25:42 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/19 15:19:31 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 12:57:01 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-char	*ft_strcat(char* dest, const char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int i;
 	int j;

@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 15:20:32 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/12 15:42:13 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 10:54:16 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ int	ft_isascii(int c)
 {
 	if ((c >= 0) && (c <= 127))
 		return (1);
-	return(0);
+	return (0);
 }

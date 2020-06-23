@@ -6,13 +6,13 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 10:31:55 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/11 11:41:42 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 19:07:43 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strstr(const char *haystack, const char *needle)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 	int j;
@@ -31,7 +31,7 @@ char *ft_strstr(const char *haystack, const char *needle)
 		if (needle[j] == '\0')
 			return ((char*)(haystack + k));
 		else
-		k++;
+			k++;
 	}
 	return (NULL);
 }

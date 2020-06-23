@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 21:43:39 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/13 17:51:52 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/23 16:19:41 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_memdel(void **ap)
 {
-	if (ap != NULL)
+	if ((ap != NULL) && (*ap != NULL))
 	{
 		free(*ap);
 		*ap = NULL;

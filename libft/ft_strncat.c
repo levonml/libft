@@ -6,16 +6,16 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 15:53:47 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/19 15:21:28 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 18:28:35 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char* dest, const char *src, size_t n)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
 	size_t i;
-	int j;
+	size_t j;
 
 	j = ft_strlen(dest);
 	i = 0;
@@ -25,6 +25,6 @@ char	*ft_strncat(char* dest, const char *src, size_t n)
 		j++;
 		i++;
 	}
-		dest[j] = '\0';
+	dest[j] = '\0';
 	return (dest);
 }

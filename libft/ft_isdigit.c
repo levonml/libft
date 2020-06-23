@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 12:09:29 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/12 12:20:35 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 11:10:26 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,3 @@ int	ft_isdigit(int c)
 		return (c);
 	return (0);
 }
-
-
-		

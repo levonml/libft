@@ -6,11 +6,11 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 14:02:34 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/19 15:20:06 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/22 16:50:14 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,17 +6,15 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 18:37:33 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/13 19:29:25 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/23 09:57:38 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_strclr(char *s)
 {
-	int i;
-
-	while (s[i])
+	while (*s)
 	{
-		s[i] = '\0';
-		i++;
+		*s = '\0';
+		s++;
 	}
 }

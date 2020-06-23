@@ -1,6 +1,6 @@
 
 # -*- MAKEFILE -*-
-LIBNAME = libft.a
+NAME = libft.a
 SRC_1 = ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c\
 ft_memset.c ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c ft_strncmp.c ft_strnstr.c\
 ft_strstr.c ft_strchr.c ft_strcpy.c ft_strlcat.c ft_strncat.c ft_strncpy.c ft_strrchr.c \
@@ -20,10 +20,10 @@ ft_putchar_fd.o ft_putnbr.o ft_putstr_fd.o ft_strequ.o ft_strjoin.o ft_strnequ.o
 HEADER = libft.h
 CC = -Wall -Wextra -Werror
 
-all:library file.o
+all:$(NAME)
 
-library:file.o
-	ar rc $(LIBNAME) $(OBJ_1) $(OBJ_2)
+$(NAME):file.o
+	ar rc $(NAME) $(OBJ_1) $(OBJ_2)
 
 file.o:$(SRC_1) $(SRC_2) $(HEADER)
 	gcc $(CC) -c $(SRC_1) $(SRC_2) $(HEADER)
@@ -31,5 +31,5 @@ file.o:$(SRC_1) $(SRC_2) $(HEADER)
 clean:
 	rm -f *.o *~ *.gch
 fclean:clean
-	rm -f $(LIBNAME)
+	rm -f $(NAME)
 re: fclean all
