@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd_main.c                               :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 14:39:03 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 14:41:36 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/11 16:05:29 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/27 09:20:42 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int main()
+int	ft_atoi(const char *nptr)
 {
-	ft_putendl_fd("hello endle!!!", 1);
-	return (0);
+	int res;
+	int i;
+	int s;
+
+	i = 0;
+	res = 0;
+	s = 1;
+	if (nptr[0] == '-')
+	{
+		i = 1;
+		s = -1;
+	}
+	if (nptr[0] == '+')
+		i = 1;
+	while (nptr[i] <= '9' && nptr[i] >= '0')
+	{
+		res = res * 10 + nptr[i] - '0';
+		i++;
+	}
+	return (res * s);
 }

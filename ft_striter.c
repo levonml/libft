@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ_main.c                                  :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 11:49:19 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 11:52:41 by lstepany         ###   ########.fr       */
+/*   Created: 2020/06/13 19:32:53 by lstepany          #+#    #+#             */
+/*   Updated: 2020/06/26 14:37:11 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-
-int main(int argc, char **argv)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	if (argc < 2)
+	int i;
+
+	i = 0;
+	while (s[i])
 	{
-		printf("argument is missing");
-		return(1);
+		f(s + i);
+		i++;
 	}
-	else
-	{
-		printf("ft_strnequ = %d\n", ft_strnequ(argv[1], argv[2], 6));
- 	}
-	return (0);
 }
