@@ -6,7 +6,7 @@
 #    By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/26 21:39:40 by lstepany          #+#    #+#              #
-#    Updated: 2020/06/27 09:38:49 by lstepany         ###   ########.fr        #
+#    Updated: 2020/06/27 14:18:38 by lstepany         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -38,7 +38,7 @@ $(NAME):$(OBJ)
 $(OBJ): %.o: %.c $(HEADER)
 	$(GCC) -c $<
 clean:
-	rm -f *.o *~ 
+	rm -rf *.o *~ 
 fclean:clean
-	rm -f libft.a
+	rm -rf libft.a
 re: fclean $(NAME)

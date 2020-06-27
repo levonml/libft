@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 16:39:09 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 16:28:07 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/27 21:53:48 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t					i;
-	unsigned char			*d;
-	const unsigned char		*s;
-	unsigned char			*t;
+	size_t				i;
+	unsigned char		*d;
+	unsigned char		*s;
+	unsigned char		*temp;
 
-	d = (unsigned char*)dest;
-	s = (const unsigned char*)src;
-	if (!(t = (unsigned char*)malloc(n * sizeof(src))))
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	if (!(temp = (unsigned char*)malloc(n)))
 		return (NULL);
 	i = 0;
 	while (i < n)
 	{
-		t[i] = s[i];
+		temp[i] = s[i];
 		i++;
 	}
 	i = 0;
 	while (i < n)
 	{
-		d[i] = t[i];
+		d[i] = temp[i];
 		i++;
 	}
-	free(t);
+	free(temp);
 	return (dest);
 }

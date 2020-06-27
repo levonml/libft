@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 12:38:08 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/22 19:27:48 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/28 00:43:51 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if ((char*)little == NULL)
 		return ((char*)big);
+	else if (big[0] == '\0' && little[0] == '\0')
+		return ("");
 	else
 	{
 		k = 0;

@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 15:38:36 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 16:43:05 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/27 22:53:41 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == cc)
-			return ((void *)(str + i));
+		  	return ((void *)(str + i));
 		i++;
 	}
 	return (NULL);
