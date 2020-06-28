@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 16:05:29 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/27 10:59:23 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/29 01:10:29 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	res = 0;
 	s = 1;
-	while (nptr[i] == ' ' || nptr[i] == '\r' || nptr[i] == '\v' || nptr[i] == '\t' || nptr[i] == '\n')
+	while (nptr[i] == ' ' || (nptr[i] <= 13 && nptr[i] >= 9))
 		i++;
 	if (nptr[i] == '-')
 	{
