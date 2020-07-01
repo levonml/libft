@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr_main.c                                   :+:      :+:    :+:   */
+/*   ft_lstnew_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 09:27:39 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/30 18:14:16 by lstepany         ###   ########.fr       */
+/*   Created: 2020/07/01 11:46:29 by lstepany          #+#    #+#             */
+/*   Updated: 2020/07/02 00:29:21 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+int main(void)
 {
-	char *s = NULL;
+	t_list *new;
+	char c;
 
-	//	s[1] = 'U';
-	printf("s = %s\n", s);
-	ft_strclr(s);
-	//	s[0] = 'U';
-	printf("s = %s\n", s);
-	return (0);
+	c = "a";
+	//	char content[] = "hello";
+	//	int content[] = {1, 2, 3};
+	char  *content = &c;
+	//	size_t cont_size = 3 * sizeof(int);
+	size_t cont_size = 10;
+	
+	new = ft_lstnew(content, cont_size);
+	//	printf("content = %d\nsize = %zu\n", ((int *)(new -> content))[0], new -> content_size);
+		printf("size = %zu\n", new->content_size);	
+	return(0);
 }

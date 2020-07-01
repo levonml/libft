@@ -6,15 +6,20 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 18:37:33 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 09:57:38 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/30 18:15:14 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 void	ft_strclr(char *s)
 {
-	while (*s)
+	if (s != NULL)
 	{
-		*s = '\0';
-		s++;
+		while (*s)
+		{
+			*s = '\0';
+			s++;
+		}
 	}
 }

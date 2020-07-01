@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 16:05:29 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/29 01:10:29 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/30 17:56:49 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_atoi(const char *nptr)
 	if (nptr[i] == '-')
 	{
 		i++;
+		if (nptr[i] == '+')
+			return (res);
 		s = -1;
 	}
 	if (nptr[i] == '+')

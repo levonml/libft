@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 14:14:25 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/22 19:36:22 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/06/30 18:03:47 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,26 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	int				i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
-	while ((s1[i] && s2[i]) && (n > 0))
+	while ((str1[i] && str2[i]) && (n > 0))
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 		n--;
 	}
 	if (n > 0)
 	{
-		if (s2[i])
-			return (-s2[i]);
-		if (s1[i])
-			return (s1[i]);
+		if (str2[i])
+			return (-str2[i]);
+		if (str1[i])
+			return (str1[i]);
 	}
 	return (0);
 }

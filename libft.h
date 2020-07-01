@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 12:51:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 16:52:56 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/01 11:57:03 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <string.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct	s_list	*next;
+}				t_list;
 int		ft_atoi(const char *nptr);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -55,8 +61,8 @@ char	*ft_strdup(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memalloc(size_t size);
 void	ft_strclr(char *s);
-void	ft_strdel(char **ap);
-void	ft_memdel(char **as);
+void	ft_strdel(char **as);
+void	ft_memdel(void **ap);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int i, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
@@ -67,4 +73,5 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+t_list	*ft_lstnew(void const *content, size_t content_size);
 #endif
