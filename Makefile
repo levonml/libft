@@ -6,7 +6,7 @@
 #    By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/26 21:39:40 by lstepany          #+#    #+#              #
-#    Updated: 2020/07/01 13:05:45 by lstepany         ###   ########.fr        #
+#    Updated: 2020/07/02 13:50:45 by lstepany         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -19,7 +19,7 @@ SRC = ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c\
 	ft_strmap.c ft_strnew.c ft_strtrim.c ft_itoa.c ft_putchar.c ft_putendl_fd.c \
 	ft_putstr.c ft_strdel.c ft_striteri.c ft_strmapi.c ft_strsplit.c ft_memalloc.c \
 	ft_putchar_fd.c ft_putnbr.c ft_putstr_fd.c ft_strequ.c ft_strjoin.c ft_strnequ.c \
-	ft_strsub.c ft_lstnew.c
+	ft_strsub.c ft_lstnew.c ft_lstmap.c ft_lstadd.c ft_lstdelone.c ft_lstdel.c ft_lstiter.c
 OBJ = ft_bzero.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o\
 	ft_memset.o ft_strcat.o ft_strcmp.o ft_strdup.o ft_strlen.o ft_strncmp.o ft_strnstr.o\
 	ft_strstr.o ft_strchr.o ft_strcpy.o ft_strlcat.o ft_strncat.o ft_strncpy.o ft_strrchr.o \
@@ -28,7 +28,7 @@ OBJ = ft_bzero.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o\
 	ft_strmap.o ft_strnew.o ft_strtrim.o ft_itoa.o ft_putchar.o ft_putendl_fd.o \
 	ft_putstr.o ft_strdel.o ft_striteri.o ft_strmapi.o ft_strsplit.o ft_memalloc.o \
 	ft_putchar_fd.o ft_putnbr.o ft_putstr_fd.o ft_strequ.o ft_strjoin.o ft_strnequ.o \
-	ft_strsub.o ft_lstnew.o
+	ft_strsub.o ft_lstnew.o ft_lstmap.o	ft_lstadd.o ft_lstdelone.o ft_lstdel.o ft_lstiter.o
 HEADER = libft.h
 GCC = gcc -Wall -Wextra -Werror
 
