@@ -6,7 +6,7 @@
 /*   By: lstepany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 13:03:30 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/05 10:38:46 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/05 20:22:15 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,31 @@
 
 t_list	*f(t_list *elem)
 {
-		elem -> content = "a";
+		elem -> content = elem -> content;
 	return (elem);
 }
 
 int main(void)
 {
 	t_list *a;
+	t_list *temp;
 	t_list *b;
+	t_list *c;
 	t_list *test;
-
-	b = NULL;
-	a = NULL;
-	a -> content = "f";
-	a -> content_size = sizeof(char) * 2;
+	t_list *(*fnc)(t_list *a);
+	fnc = &f;
+	a = ft_lstnew("a", 20);
+	b = ft_lstnew("aa", 20);
+	c = ft_lstnew("aaaa", 20);
 	a -> next = b;
-	b -> content = "g";
-	b -> content_size = sizeof(char) * 2;
-	b -> next = NULL;
-	test = ft_lstmap(a, f);
-//	printf("%s\n", test -> content);
-	printf("%s\n", a -> content);
+	b -> next = c;
+	c -> next = NULL;
+	test = ft_lstmap(a, fnc);
+	temp = a;
+	while (temp != NULL)
+	{
+		printf("%s\n", temp -> content);
+		temp = temp -> next;
+	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lstepany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:19:34 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/05 10:40:07 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/05 18:20:00 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list *head;
+//	t_list *head;
 
-	head = *alst;
-	new -> next = head;
-	head = new;
+//	head = *alst;
+	new -> next = *alst;
+	*alst = new;
 }
