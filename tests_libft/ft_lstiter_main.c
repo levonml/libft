@@ -6,7 +6,7 @@
 /*   By: lstepany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 13:03:30 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/05 10:38:46 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/05 12:38:51 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-t_list	*f(t_list *elem)
+void	f(t_list *elem)
 {
 		elem -> content = "a";
-	return (elem);
 }
 
 int main(void)
 {
 	t_list *a;
 	t_list *b;
-	t_list *test;
+//	t_list *head;
+	void (*fun)(t_list *a);
 
-	b = NULL;
-	a = NULL;
+	fun = &f;
+//	b = NULL;
+//	a = NULL;
+	a = (t_list *)(malloc(sizeof(t_list)));
+	b = (t_list *)(malloc(sizeof(t_list)));
 	a -> content = "f";
 	a -> content_size = sizeof(char) * 2;
 	a -> next = b;
 	b -> content = "g";
 	b -> content_size = sizeof(char) * 2;
 	b -> next = NULL;
-	test = ft_lstmap(a, f);
+
+	ft_lstiter(a, fun);
 //	printf("%s\n", test -> content);
-	printf("%s\n", a -> content);
+	printf("%s\n", b -> content);
 	return (0);
 }
