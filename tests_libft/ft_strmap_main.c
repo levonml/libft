@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 10:38:37 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 10:46:38 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/06 16:03:28 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ char func(char q)
 int main()
 {
 	const char *r = "123456789";
-	printf("%s", ft_strmap(r, &func));
+	char *str;
+
+	str = ft_strmap(r, &func);
+	printf("%s", str);
 	return (0);
 }

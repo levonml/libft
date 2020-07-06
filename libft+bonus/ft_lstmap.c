@@ -6,7 +6,7 @@
 /*   By: lstepany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:39:35 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/05 20:22:03 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/06 17:50:35 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,24 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *new;
+	t_list *map;
+	t_list *temp;
 
-		new = (t_list *)(malloc(sizeof(t_list)));
-		if (new == NULL)
-			return (NULL);
+	if (lst == NULL)
+		return (NULL);
+	map = NULL;
+	map = f( ft_lstnew(lst->content, lst->content_size));
+	if (map == NULL)
+		return (NULL);
+	temp = map;
+	lst = lst->next;
 	while (lst != NULL)
 	{
-		new = f(lst);
-		lst = lst -> next;
-		new -> next = (t_list *)(malloc(sizeof(t_list)));
-//		new = ft_lstnew() 
+		temp->next = f(ft_lstnew(lst->content, lst->content_size));
+		temp = temp->next;
+		if (temp == NULL)
+			return (NULL);
+		lst = lst->next;
 	}
-	new -> next = NULL;
-
-	return (lst);
+	return (map);
 }

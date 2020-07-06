@@ -6,7 +6,7 @@
 /*   By: lstepany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 10:10:16 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/03 18:47:34 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/06 11:40:18 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,11 @@
 
 void ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-/*	t_list *lst;
-
-	lst = *alst;
-	if (lst != NULL)
-	{
-		del(lst -> content, lst -> content_size);	
-		free(lst);
-	}
-	lst = NULL;*/
 	if (*alst != NULL)
 	{
 		del((*alst) -> content, (*alst) -> content_size);	
-	free(*alst);
+		free(*alst);
+		*alst = NULL;
 	}
-	*alst = NULL;
 }
 

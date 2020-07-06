@@ -6,7 +6,7 @@
 /*   By: lstepany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 13:03:30 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/05 20:22:15 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/06 17:51:19 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,39 @@
 #include <stdio.h>
 
 t_list	*f(t_list *elem)
+
 {
-		elem -> content = elem -> content;
+	elem->content = "G";
 	return (elem);
-}
+	}
 
 int main(void)
 {
 	t_list *a;
-	t_list *temp;
 	t_list *b;
 	t_list *c;
+	t_list *ptr;
+	t_list *temp;
 	t_list *test;
-	t_list *(*fnc)(t_list *a);
-	fnc = &f;
-	a = ft_lstnew("a", 20);
-	b = ft_lstnew("aa", 20);
-	c = ft_lstnew("aaaa", 20);
-	a -> next = b;
-	b -> next = c;
-	c -> next = NULL;
-	test = ft_lstmap(a, fnc);
+//	t_list *n;
+
+	a = ft_lstnew("123456", 7);
+	b = ft_lstnew("aa", 3);
+	c = ft_lstnew("zz", 3);
 	temp = a;
-	while (temp != NULL)
+	temp->next = b;
+	temp = b;
+	temp->next = c;
+	//n = ft_lstnew(NULL, 2);
+//		n  = NULL ;
+	test = ft_lstmap(a, f);
+//	test = ft_lstmap(n, f);
+
+	ptr = test;
+	while ( ptr != NULL)
 	{
-		printf("%s\n", temp -> content);
-		temp = temp -> next;
+		printf("%s\n",  ptr->content);
+		ptr = ptr->next;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:24:35 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/02 00:39:13 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/06 15:46:23 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *new;
 
-	new = (t_list *)malloc(sizeof(new));
+	new = (t_list *)malloc(sizeof(t_list));
 	if (new == NULL)
 		return NULL;
 	if (content == NULL)
