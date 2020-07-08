@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/16 22:54:36 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 15:12:57 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/07 10:13:00 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strtrim(char const *s)
 	l = ft_strlen(s) - 1;
 	while (s[l] == '\n' || s[l] == '\t' || s[l] == ' ')
 		l--;
+	if (s[i] == '\0')
+		return ("");
 	trim = ft_strsub(s, i, l - i + 1);
 	return (trim);
 }

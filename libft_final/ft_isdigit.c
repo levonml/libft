@@ -6,13 +6,13 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 12:09:29 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/22 11:10:26 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/07 10:37:09 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
 	if ((c <= '9') && (c >= '0'))
-		return (c);
+		return (1);
 	return (0);
 }

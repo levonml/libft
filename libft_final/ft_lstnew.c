@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/16 21:25:58 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 12:10:24 by lstepany         ###   ########.fr       */
+/*   Created: 2020/07/01 11:24:35 by lstepany          #+#    #+#             */
+/*   Updated: 2020/07/07 09:57:14 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char *join;
+	t_list *new;
 
-	join = (char*)malloc(sizeof(char*) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (join == NULL)
+	new = (t_list *)malloc(sizeof(t_list));
+	if (new == NULL)
 		return (NULL);
-	ft_strcpy(join, s1);
-	return (ft_strcat(join, s2));
+	if (content == NULL)
+	{
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	else if (content_size == 0)
+		new->content = NULL;
+	else
+	{
+		new->content = (void *)content;
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }
