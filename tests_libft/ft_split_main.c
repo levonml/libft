@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 13:21:29 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 13:23:56 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/09 15:42:30 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int main()
 	 	int i;
 	char **split;
 
-	split = ft_strsplit("hello aaastr_aaaasaaaplitaaa!aaa!aaaaa!!!!aaaaaaaaaaa", 'a');
+//	split = ft_strsplit("hello aaastr_aaaasaaaplitaaa!aaa!aaaaa!!!!aaaaaaaaaaa", 'a');
+	split = ft_strsplit("", 'o');
 		i = 0;
 		while (split[i])
 			{

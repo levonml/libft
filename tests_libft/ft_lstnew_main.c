@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:46:29 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/02 00:29:21 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/09 15:48:36 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 int main(void)
 {
 	t_list *new;
-	char c;
+//	char *c;
 
-	c = "a";
-	//	char content[] = "hello";
+//	c = "a";
+		char content[] = "hello";
 	//	int content[] = {1, 2, 3};
-	char  *content = &c;
+//	char  *content = &c;
 	//	size_t cont_size = 3 * sizeof(int);
 	size_t cont_size = 10;
 	

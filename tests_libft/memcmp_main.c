@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 22:35:23 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/29 00:48:27 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/08 17:13:55 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int 	main(int argc, char **argv)
 		//   printf("memcmp = %d\n", 	memcmp(i, i2, sizeof(int)*5));
 	printf("ft_memcmp = %d\n", 	ft_memcmp(argv[1], argv[2], n));
 	printf("memcmp = %d\n", 	memcmp(argv[1], argv[2], n));
-		printf("ft_memcmp = %d\n", 	ft_memcmp("testing this string\0 which continues", "testing this string  which", 21));
-			printf("memcmp = %d\n", 	memcmp("testing this string\0 which continues", "testing this string  which", 21));
+		printf("ft_memcmp = %d\n", 	memcmp("testing this string\0 which continues", "testing this string  which", 20));
+			printf("memcmp = %d\n", 	ft_memcmp("testing this string\0 which continues", "testing this string  which", 20));
 	}
 	return(0);
 }

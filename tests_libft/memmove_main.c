@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 23:42:45 by lstepany          #+#    #+#             */
-/*   Updated: 2020/07/08 13:00:18 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/08 15:55:51 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int 	main()
 	//	int m[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     // char c[] = "abc\0cd";
 
-	 printf("ft_memmove = %s\n", ft_memmove(s + 2, s, 8));
-		printf("memmove = %s\n", memmove(d +2, d, 8));
+	 printf("ft_memmove = %s\n", ft_memmove(s + 2, s,7 ));
+		printf("memmove = %s\n", memmove(d +2, d, 7));
 
 	return(0);
 }

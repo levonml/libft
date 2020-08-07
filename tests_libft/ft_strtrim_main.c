@@ -6,7 +6,7 @@
 /*   By: lstepany <lstepany@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 12:13:19 by lstepany          #+#    #+#             */
-/*   Updated: 2020/06/23 15:14:15 by lstepany         ###   ########.fr       */
+/*   Updated: 2020/07/09 15:44:12 by lstepany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 int main ()
 {
-	printf("%s", ft_strtrim("  f     "));
+	printf("%s", ft_strtrim("   a   "));
 	return (0);
 }
